@@ -8,15 +8,10 @@
 </head>
 <body>
     <form action="https://api.staticforms.xyz/submit" method="post">
-        <!-- Configuração da API StaticForms -->
-        <input type="hidden" name="accessKey" value="d2892c48-bf1f-40a4-9f63-d4d46c93be32"> <!-- Substitua pelo seu accessKey -->
+        <input type="hidden" name="accessKey" value="d2892c48-bf1f-40a4-9f63-d4d46c93be32">
         <input type="hidden" name="subject" value="Respostas do Questionário sobre o Livro VII da Ética a Nicômaco">
-        <input type="hidden" name="replyTo" value="testeste054@gmail.com"> <!-- Para responder ao e-mail do remetente -->
+        <input type="hidden" name="replyTo" value="testeste054@gmail.com">
 
-        <!-- Proteção contra spam -->
-        <input type="text" name="honeypot" style="display: none;">
-
-        <!-- Nome e Curso -->
         <h1>Questionário sobre o Livro VII da Ética a Nicômaco</h1>
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="$nome" required><br><br>
@@ -24,109 +19,117 @@
         <label for="curso">Curso:</label>
         <input type="text" id="curso" name="$curso" required><br><br>
 
-        <!-- Perguntas Objetivas -->
-        <h3>1. Qual é o conceito central de justiça no Livro VII de "Ética a Nicômaco"?</h3>
-        <input type="radio" id="igualdade" name="$pergunta1" value="Igualdade de condições para todos" required>
-        <label for="igualdade">Igualdade de condições para todos</label><br>
-        <input type="radio" id="atribuir" name="$pergunta1" value="Atribuir a cada um o que lhe é devido">
-        <label for="atribuir">Atribuir a cada um o que lhe é devido</label><br>
-        <input type="radio" id="poder" name="$pergunta1" value="O poder dos governantes">
-        <label for="poder">O poder dos governantes</label><br>
-        <input type="radio" id="bemestar" name="$pergunta1" value="O bem-estar da maioria">
-        <label for="bemestar">O bem-estar da maioria</label><br><br>
+        <!-- Pergunta 1 -->
+        <h3>1. Qual é a diferença entre continência e incontinência?</h3>
+        <input type="radio" id="opcao1" name="$pergunta1" value="O continente é controlado pela paixão" required>
+        <label for="opcao1">O continente é controlado pela paixão</label><br>
+        <input type="radio" id="opcao2" name="$pergunta1" value="O incontinente nunca age conforme a razão">
+        <label for="opcao2">O incontinente nunca age conforme a razão</label><br>
+        <input type="radio" id="opcao3" name="$pergunta1" value="O continentes resiste aos desejos usando a razão">
+        <label for="opcao3">O continente resiste aos desejos usando a razão</label> <!-- Correta --><br>
+        <input type="radio" id="opcao4" name="$pergunta1" value="A continência depende exclusivamente do prazer">
+        <label for="opcao4">A continência depende exclusivamente do prazer</label><br><br>
 
-        <h3>2. Segundo Aristóteles, qual é a causa dos vícios e da falta de controle?</h3>
-        <input type="radio" id="faltaConhecimento" name="$pergunta2" value="Falta de conhecimento" required>
-        <label for="faltaConhecimento">Falta de conhecimento</label><br>
-        <input type="radio" id="excesso" name="$pergunta2" value="Excesso de desejo">
-        <label for="excesso">Excesso de desejo</label><br>
-        <input type="radio" id="fortuna" name="$pergunta2" value="Fortuna desfavorável">
-        <label for="fortuna">Fortuna desfavorável</label><br>
-        <input type="radio" id="ausenciaVirtude" name="$pergunta2" value="Ausência de virtude">
-        <label for="ausenciaVirtude">Ausência de virtude</label><br><br>
+        <!-- Pergunta 2 -->
+        <h3>2. O que caracteriza a incontinência segundo Aristóteles?</h3>
+        <input type="radio" id="opcao1" name="$pergunta2" value="A ignorância do que é correto" required>
+        <label for="opcao1">A ignorância do que é correto</label><br>
+        <input type="radio" id="opcao2" name="$pergunta2" value="Agir contra o próprio julgamento racional">
+        <label for="opcao2">Agir contra o próprio julgamento racional</label> <!-- Correta --><br>
+        <input type="radio" id="opcao3" name="$pergunta2" value="O controle absoluto sobre os desejos">
+        <label for="opcao3">O controle absoluto sobre os desejos</label><br>
+        <input type="radio" id="opcao4" name="$pergunta2" value="A ausência de desejos">
+        <label for="opcao4">A ausência de desejos</label><br><br>
 
-        <h3>3. O que Aristóteles identifica como a maior forma de incontinência?</h3>
-        <input type="radio" id="luxuria" name="$pergunta3" value="Luxúria" required>
-        <label for="luxuria">Luxúria</label><br>
-        <input type="radio" id="ganancia" name="$pergunta3" value="Ganância">
-        <label for="ganancia">Ganância</label><br>
-        <input type="radio" id="ira" name="$pergunta3" value="Ira">
-        <label for="ira">Ira</label><br>
-        <input type="radio" id="glutonaria" name="$pergunta3" value="Glutonaria">
-        <label for="glutonaria">Glutonaria</label><br><br>
+        <!-- Pergunta 3 -->
+        <h3>3. Qual é o papel do prazer nas ações morais, segundo Aristóteles?</h3>
+        <input type="radio" id="opcao1" name="$pergunta3" value="Todo prazer é considerado mau" required>
+        <label for="opcao1">Todo prazer é considerado mau</label><br>
+        <input type="radio" id="opcao2" name="$pergunta3" value="Os prazeres legítimos são diferentes dos excessivos">
+        <label for="opcao2">Os prazeres legítimos são diferentes dos excessivos</label> <!-- Correta --><br>
+        <input type="radio" id="opcao3" name="$pergunta3" value="Prazeres e virtudes são incompatíveis">
+        <label for="opcao3">Prazeres e virtudes são incompatíveis</label><br>
+        <input type="radio" id="opcao4" name="$pergunta3" value="O prazer é sempre prejudicial à virtude">
+        <label for="opcao4">O prazer é sempre prejudicial à virtude</label><br><br>
 
-        <h3>4. Qual é a diferença entre a continência e a incontinência, segundo Aristóteles?</h3>
-        <input type="radio" id="continencia" name="$pergunta4" value="Controle sobre os desejos" required>
-        <label for="continencia">Controle sobre os desejos</label><br>
-        <input type="radio" id="praticaVirtude" name="$pergunta4" value="Prática da virtude">
-        <label for="praticaVirtude">Prática da virtude</label><br>
-        <input type="radio" id="ausenciaDesejo" name="$pergunta4" value="Ausência de desejos">
-        <label for="ausenciaDesejo">Ausência de desejos</label><br>
-        <input type="radio" id="exagero" name="$pergunta4" value="Exagero nas ações">
-        <label for="exagero">Exagero nas ações</label><br><br>
+        <!-- Pergunta 4 -->
+        <h3>4. Como a continência está relacionada ao pensamento prático?</h3>
+        <input type="radio" id="opcao1" name="$pergunta4" value="Manter o controle racional contra impulsos" required>
+        <label for="opcao1">Manter o controle racional contra impulsos</label> <!-- Correta --><br>
+        <input type="radio" id="opcao2" name="$pergunta4" value="Evitar qualquer tipo de prazer">
+        <label for="opcao2">Evitar qualquer tipo de prazer</label><br>
+        <input type="radio" id="opcao3" name="$pergunta4" value="Agir de forma impulsiva e emocional">
+        <label for="opcao3">Agir de forma impulsiva e emocional</label><br>
+        <input type="radio" id="opcao4" name="$pergunta4" value="Rejeitar o uso da razão em decisões morais">
+        <label for="opcao4">Rejeitar o uso da razão em decisões morais</label><br><br>
 
-        <h3>5. Como Aristóteles define a temperança?</h3>
-        <input type="radio" id="equilibrio" name="$pergunta5" value="Equilíbrio entre os extremos" required>
-        <label for="equilibrio">Equilíbrio entre os extremos</label><br>
-        <input type="radio" id="ausenciaPaixao" name="$pergunta5" value="Ausência de paixão">
-        <label for="ausenciaPaixao">Ausência de paixão</label><br>
-        <input type="radio" id="ausenciaDesejo2" name="$pergunta5" value="Ausência de desejos">
-        <label for="ausenciaDesejo2">Ausência de desejos</label><br>
-        <input type="radio" id="prazerExcessivo" name="$pergunta5" value="Busca por prazer excessivo">
-        <label for="prazerExcessivo">Busca por prazer excessivo</label><br><br>
+        <!-- Pergunta 5 -->
+        <h3>5. O que diferencia o incontinente do vicioso, segundo Aristóteles?</h3>
+        <input type="radio" id="opcao1" name="$pergunta5" value="O incontinente desconhece o certo" required>
+        <label for="opcao1">O incontinente desconhece o certo</label><br>
+        <input type="radio" id="opcao2" name="$pergunta5" value="O vicioso escolhe o mal conscientemente">
+        <label for="opcao2">O vicioso escolhe o mal conscientemente</label> <!-- Correta --><br>
+        <input type="radio" id="opcao3" name="$pergunta5" value="O incontinente age sempre conforme a razão">
+        <label for="opcao3">O incontinente age sempre conforme a razão</label><br>
+        <input type="radio" id="opcao4" name="$pergunta5" value="O vicioso é controlado pela razão">
+        <label for="opcao4">O vicioso é controlado pela razão</label><br><br>
 
-        <h3>6. O que caracteriza uma ação corajosa, de acordo com Aristóteles?</h3>
-        <input type="radio" id="enfrentamento" name="$pergunta6" value="Enfrentamento do perigo com razão" required>
-        <label for="enfrentamento">Enfrentamento do perigo com razão</label><br>
-        <input type="radio" id="ausenciaMedo" name="$pergunta6" value="Ausência total de medo">
-        <label for="ausenciaMedo">Ausência total de medo</label><br>
-        <input type="radio" id="buscaPerigo" name="$pergunta6" value="Busca pelo perigo constantemente">
-        <label for="buscaPerigo">Busca pelo perigo constantemente</label><br>
-        <input type="radio" id="respeitoRegras" name="$pergunta6" value="Respeito estrito às regras">
-        <label for="respeitoRegras">Respeito estrito às regras</label><br><br>
+        <!-- Pergunta 6 -->
+        <h3>6. Qual é a maior forma de incontinência, segundo Aristóteles?</h3>
+        <input type="radio" id="opcao1" name="$pergunta6" value="Ganância" required>
+        <label for="opcao1">Ganância</label><br>
+        <input type="radio" id="opcao2" name="$pergunta6" value="Ira">
+        <label for="opcao2">Ira</label><br>
+        <input type="radio" id="opcao3" name="$pergunta6" value="Luxúria">
+        <label for="opcao3">Luxúria</label> <!-- Correta --><br>
+        <input type="radio" id="opcao4" name="$pergunta6" value="Glutonaria">
+        <label for="opcao4">Glutonaria</label><br><br>
 
-        <h3>7. Como a educação afeta a virtude, segundo Aristóteles?</h3>
-        <input type="radio" id="influencia" name="$pergunta7" value="Influencia a formação dos hábitos" required>
-        <label for="influencia">Influencia a formação dos hábitos</label><br>
-        <input type="radio" id="diminuiDesejo" name="$pergunta7" value="Diminui o desejo por prazer">
-        <label for="diminuiDesejo">Diminui o desejo por prazer</label><br>
-        <input type="radio" id="aumentaPaixao" name="$pergunta7" value="Aumenta a paixão e o desejo">
-        <label for="aumentaPaixao">Aumenta a paixão e o desejo</label><br>
-        <input type="radio" id="diminuiCoragem" name="$pergunta7" value="Diminui a coragem nas ações">
-        <label for="diminuiCoragem">Diminui a coragem nas ações</label><br><br>
+        <!-- Pergunta 7 -->
+        <h3>7. Como a educação influencia a virtude, segundo Aristóteles?</h3>
+        <input type="radio" id="opcao1" name="$pergunta7" value="Diminui a coragem" required>
+        <label for="opcao1">Diminui a coragem</label><br>
+        <input type="radio" id="opcao2" name="$pergunta7" value="Aumenta o desejo por prazer">
+        <label for="opcao2">Aumenta o desejo por prazer</label><br>
+        <input type="radio" id="opcao3" name="$pergunta7" value="Influencia a formação dos hábitos">
+        <label for="opcao3">Influencia a formação dos hábitos</label> <!-- Correta --><br>
+        <input type="radio" id="opcao4" name="$pergunta7" value="Diminui o desejo por prazer">
+        <label for="opcao4">Diminui o desejo por prazer</label><br><br>
 
-        <h3>8. Qual é a relação entre a virtude e o prazer, segundo Aristóteles?</h3>
-        <input type="radio" id="incompativeis" name="$pergunta8" value="São incompatíveis" required>
-        <label for="incompativeis">São incompatíveis</label><br>
-        <input type="radio" id="complementares" name="$pergunta8" value="São complementares">
-        <label for="complementares">São complementares</label><br>
-        <input type="radio" id="opostos" name="$pergunta8" value="São opostos">
-        <label for="opostos">São opostos</label><br>
-        <input type="radio" id="dependentes" name="$pergunta8" value="São dependentes um do outro">
-        <label for="dependentes">São dependentes um do outro</label><br><br>
+        <!-- Pergunta 8 -->
+        <h3>8. Qual é a relação entre virtude e prazer?</h3>
+        <input type="radio" id="opcao1" name="$pergunta8" value="São opostos" required>
+        <label for="opcao1">São opostos</label><br>
+        <input type="radio" id="opcao2" name="$pergunta8" value="São complementares">
+        <label for="opcao2">São complementares</label> <!-- Correta --><br>
+        <input type="radio" id="opcao3" name="$pergunta8" value="Prazer anula a virtude">
+        <label for="opcao3">Prazer anula a virtude</label><br>
+        <input type="radio" id="opcao4" name="$pergunta8" value="Virtude é superior ao prazer">
+        <label for="opcao4">Virtude é superior ao prazer</label><br><br>
 
-        <h3>9. Como Aristóteles define o papel da amizade na vida ética?</h3>
-        <input type="radio" id="secundaria" name="$pergunta9" value="É secundária em relação à justiça" required>
-        <label for="secundaria">É secundária em relação à justiça</label><br>
-        <input type="radio" id="essencial" name="$pergunta9" value="É essencial para a prática da virtude">
-        <label for="essencial">É essencial para a prática da virtude</label><br>
-        <input type="radio" id="obstaculo" name="$pergunta9" value="É um obstáculo para a sabedoria">
-        <label for="obstaculo">É um obstáculo para a sabedoria</label><br>
-        <input type="radio" id="indiferente" name="$pergunta9" value="É indiferente para a vida feliz">
-        <label for="indiferente">É indiferente para a vida feliz</label><br><br>
+        <!-- Pergunta 9 -->
+        <h3>9. Como Aristóteles relaciona hábito e virtude?</h3>
+        <input type="radio" id="opcao1" name="$pergunta9" value="O hábito é irrelevante para a virtude" required>
+        <label for="opcao1">O hábito é irrelevante para a virtude</label><br>
+        <input type="radio" id="opcao2" name="$pergunta9" value="O hábito reforça os desejos">
+        <label for="opcao2">O hábito reforça os desejos</label><br>
+        <input type="radio" id="opcao3" name="$pergunta9" value="A virtude é adquirida através do hábito">
+        <label for="opcao3">A virtude é adquirida através do hábito</label> <!-- Correta --><br>
+        <input type="radio" id="opcao4" name="$pergunta9" value="O hábito destrói a virtude">
+        <label for="opcao4">O hábito destrói a virtude</label><br><br>
 
-        <h3>10. Qual é a diferença entre justiça e amizade, de acordo com Aristóteles?</h3>
-        <input type="radio" id="justica" name="$pergunta10" value="A justiça é mais abrangente que a amizade" required>
-        <label for="justica">A justiça é mais abrangente que a amizade</label><br>
-        <input type="radio" id="amizade" name="$pergunta10" value="A amizade é mais abrangente que a justiça">
-        <label for="amizade">A amizade é mais abrangente que a justiça</label><br>
-        <input type="radio" id="iguais" name="$pergunta10" value="Ambas são iguais em importância">
-        <label for="iguais">Ambas são iguais em importância</label><br>
-        <input type="radio" id="injustica" name="$pergunta10" value="A injustiça destrói a amizade">
-        <label for="injustica">A injustiça destrói a amizade</label><br><br>
+        <!-- Pergunta 10 -->
+        <h3>10. O que Aristóteles considera como o fim último da vida humana?</h3>
+        <input type="radio" id="opcao1" name="$pergunta10" value="Riqueza" required>
+        <label for="opcao1">Riqueza</label><br>
+        <input type="radio" id="opcao2" name="$pergunta10" value="Felicidade">
+        <label for="opcao2">Felicidade</label> <!-- Correta --><br>
+        <input type="radio" id="opcao3" name="$pergunta10" value="Poder">
+        <label for="opcao3">Poder</label><br>
+        <input type="radio" id="opcao4" name="$pergunta10" value="Prazer">
+        <label for="opcao4">Prazer</label><br><br>
 
-        <!-- Botão de Envio -->
-        <input type="submit" value="Enviar">
+        <input type="submit" value="Enviar Respostas">
     </form>
 </body>
 </html>
