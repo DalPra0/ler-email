@@ -2,6 +2,7 @@ import imaplib
 import email
 from bs4 import BeautifulSoup
 import pandas as pd
+from tqdm import tqdm
 
 def extract_form_data(body):
     soup = BeautifulSoup(body, 'html.parser')
@@ -14,25 +15,23 @@ def extract_form_data(body):
 
 def calculate_acertos(data, correct_answers):
     acertos = 0
-    for i in range(1, 13):
+    for i in range(1, 11):
         question = f'Pergunta{i}'
         if question in data and data[question] == correct_answers[i-1]:
             acertos += 1
     return acertos
 
 correct_answers = [
-    'Atribuir a cada um o que lhe é devido', # Pergunta 1
-    'Ausência de virtude',                  # Pergunta 2
-    'Luxúria',                              # Pergunta 3
-    'Controle sobre os desejos',            # Pergunta 4
-    'Equilíbrio entre os extremos',         # Pergunta 5
-    'Enfrentamento do perigo com razão',    # Pergunta 6
-    'Influencia a formação dos hábitos',    # Pergunta 7
-    'São complementares',                   # Pergunta 8
-    'Educação e hábito',                    # Pergunta 9
-    'Guiando para o bem comum',             # Pergunta 10
-    'Apoio moral e motivacional',            # Pergunta 11
-    'Felicidade'                            # Pergunta 12
+    'O continente resiste aos desejos usando a razão',  # Pergunta 1
+    'Agir contra o próprio julgamento racional',        # Pergunta 2
+    'Os prazeres legítimos são diferentes dos excessivos', # Pergunta 3
+    'Manter o controle racional contra impulsos',        # Pergunta 4
+    'O vicioso escolhe o mal conscientemente',           # Pergunta 5
+    'Luxúria',                                           # Pergunta 6
+    'Influencia a formação dos hábitos',                 # Pergunta 7
+    'São complementares',                                # Pergunta 8
+    'A virtude é adquirida através do hábito',           # Pergunta 9
+    'Felicidade'                                         # Pergunta 10
 ]
 
 mail = imaplib.IMAP4_SSL('imap.gmail.com')
@@ -45,7 +44,7 @@ email_ids = data[0].split()
 
 form_data_list = []
 
-for email_id in email_ids:
+for email_id in tqdm(email_ids, desc="Processando e-mails", unit="email"):
     status, msg_data = mail.fetch(email_id, '(RFC822)')
     msg = email.message_from_bytes(msg_data[0][1])
     
